@@ -1,0 +1,167 @@
+/*
+    Theme Name: Gym Wordpress
+    Theme URI: 
+    Author: Juan Pablo De la torre Valdez
+    Author URI: http://twitter.com/codigoconjuan
+    Description: Theme Diseñado para el Gimnasio GymFitness
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: Gym, gimnasio, flexbox, css grid, mobile first
+    Text Domain: gymfitness
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap');
+:root{
+    /** fuentes**/
+    --fuente-principal: "Raleway", sans-serif;
+    --fuente-heading: "Staatliches", sans-serif;
+    /* Colores */
+    --primario: #ff5b00;
+    --gris-oscuro: #2f2e2e;
+    --gris-claro: #ebebeb;
+    --blanco: #ffff;
+    --negro: #000;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;   
+}* , *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuente-principal);
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+/* Heading */
+h1, h2, h3, h4{
+    font-family: var(--fuente-heading);
+    margin: 0 0 5rem 0;
+    line-height: 2;
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4.8rem;
+}
+h3{
+    font-size: 3.6rem;
+}
+h4{
+    font-size: 2.4rem;
+}
+/* Globales */
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.imagen-destacada{
+    margin-bottom: 3rem;
+}
+.contenedor{
+    width: min(95%, 120rem);  
+    margin: 0 auto; 
+}
+.contenido-centrado{
+    width: min(95%, 80rem);  
+}
+/* Utilidades */
+.text-center{
+    text-align: center;
+}
+.text-primary{
+    color: var(--primario);
+}
+.text-blanco{
+    color: var(--blanco);
+}
+.seccion{
+    padding: 5rem 0;
+}
+/* Header */
+.header{
+    background-color: var(--gris-oscuro);
+    padding: 2rem 0;
+}
+.barra-navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px){
+    .barra-navegacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px){
+    .menu-principal{
+        display: block;
+    }
+    .menu-principal .menu{
+        display: flex;
+    }
+}
+.menu-principal a{
+    font-family: var(--fuente-heading);
+    display: block;
+    text-align: cetner;
+    color: var(--blanco);
+    font-size: 2.2rem;
+    padding: .5rem 2rem;
+}
+
+
+@media (min-width: 768px){
+    .menu-principal a {
+        position: relative;
+        z-index: 1;
+    }
+    .menu-principal .current_page_item{
+        border-bottom: 3px solid var(--primario);
+    }
+
+    .menu-principal a::before, 
+    .menu-principal a::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: var(--primario);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+    .menu-principal a::before {
+        top: 0;
+        transform-origin: left;
+    }
+    .menu-principal a::after {
+        top:50%;
+        transform-origin: right;
+    }
+    .menu-principal a:hover::before {
+        transform: scaleX(1);
+    }
+    .menu-principal a:hover::after {
+        transform: scaleX(1);
+    }
+}
