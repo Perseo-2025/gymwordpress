@@ -1,0 +1,1 @@
+<h1>Desde single.php (Custo post y entrada de cambios)</h1>
