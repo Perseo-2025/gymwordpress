@@ -16,7 +16,6 @@
                 );
  
                 $clases = new WP_Query($args);
- 
                 while($clases->have_posts()){
                     $clases->the_post();
             ?>
