@@ -510,22 +510,26 @@ body.home .header{
     justify-content: flex-end;
 }
 /* botones */
+.form-submit .submit,
 .boton{
     background-color: var(--blanco);
     color: var(--negro);
     padding: 1rem 3rem;
     display: block;
     flex: 1;
+    width: 100%;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: .5rem;
     margin: 1rem 0;
+    border: none;
 }
 @media (min-width: 768px) { 
     .boton{
         display: inline-block;
         flex: 0 0 auto;
+        width: auto;
     }
 }
 .boton-primario{
@@ -699,4 +703,78 @@ line-height: 1em;
     .contenedor-menu{
         all: unset;
     }
+}
+
+/* Comentarios */
+.comentarios{
+    margin-top: 5rem ;
+    width: min(95%, 60rem);
+    margin: 5rem auto 0 auto;
+}
+.comment-reply-title{
+    color: var(--primario);
+    text-align: center;
+}
+.logged-in-as{
+    color: var(--primario);
+}
+.comment-form-comment label{
+    font-weight: 700;
+    margin: 2rem 0;
+    display: block;
+}
+.form-submit .submit{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+.comment-form-comment textarea
+.comentarios input[type="text"]{
+    border: 1px solid var(--gris-claro);
+    width: 100%;
+    padding: 1rem;
+}
+
+.comentarios input[type="text"]{
+    margin: .5rem 0;
+}
+h3.comentarios{
+    margin-top: 3rem;
+}
+.lista-comentarios .comment{
+    background-color: var(--gris-claro);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+}
+.lista-comentarios a{
+    color: var(--primario);
+}
+.lista-comentarios cite{
+    color: var(--primario);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.lista-comentarios .children .comment{
+    background-color: var(--blanco);
+    margin: 2rem 0;
+}
+
+/* paginacion */
+.pagination .screen-reader-text {
+    visibility: hidden;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+.nav-links a{
+    font-size: 1.4rem;
+    color: var(--primario);
+    font-weight: 700;
+    padding: .5erm;
+}
+.nav-links .current{
+    font-size: 1.4rem;
+    padding: .5erm;
 }

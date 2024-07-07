@@ -11,7 +11,11 @@
                 }
             ?>
         </ul>
-        
+                
+        <?php 
+            the_post_navigation()/* paginacion */
+        ?>
+
     </main>
 
 <?php
